@@ -1,18 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "c19750ff-3629-48bf-85ac-104598b1237f"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "projeto-to-do-angular": {
+    "first-angular-app": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -20,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/projeto-to-do-angular",
+            "outputPath": "dist/first-angular-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,13 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
-            ], 
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -57,13 +46,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -72,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "projeto-to-do-angular:build"
+            "browserTarget": "first-angular-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "projeto-to-do-angular:build:production"
+              "browserTarget": "first-angular-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "projeto-to-do-angular:build"
+            "browserTarget": "first-angular-app:build"
           }
         },
         "test": {
@@ -120,16 +109,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "projeto-to-do-angular:serve"
+            "devServerTarget": "first-angular-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "projeto-to-do-angular:serve:production"
+              "devServerTarget": "first-angular-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "projeto-to-do-angular"
+  "defaultProject": "first-angular-app",
+  "cli": {
+    "analytics": false
+  }
 }
