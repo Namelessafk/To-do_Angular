@@ -1,5 +1,7 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
 h1{
     font-family: fantasy;
-    color: blueviolet;
     text-align: center;
 }

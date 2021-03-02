@@ -40,8 +40,14 @@ export class TodosComponent implements OnInit {
       content: this.inputTodo,
       completed: false
     });
+    }
+    editTask(id: number){
+      let content = this.todos[id].content;
+      let result = prompt("Edit Task Title", content);
+      if (result !== null && result !== ""){
+        this.todos[id].content = result;
+      }
+    }
 
-    this.inputTodo = "";
-  }
 
 }

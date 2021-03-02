@@ -3,15 +3,18 @@
 		<input 
 			type="text"
 			name="inputTodo"
-			placeholder="Enter todo..."
+			placeholder="Digite o To-do..."
 			class="todo-input"
 			[(ngModel)]="inputTodo"
 		/>
-		<input type="submit" value="Add Todo" class="todo-submit" />
+		<input type="submit" value="Adicionar To-do" class="todo-submit" />
 	</form>
 	<div *ngFor="let todo of todos; let i = index;" class="todo {{ (todo.completed ? 'done' : '') }}">
 		<div class="id">{{ i }}</div>
 		<div class="content" (click)="toggleDone(i)">{{ todo.content }}</div>
+		<td>
+			<button class="btn btn-primary btn-xs" (click)="editTask(i)"> Edit </button>
+		 </td>
 		<button class="delete" (click)="deleteTodo(i)">Remove</button>
 	</div>
 </div>

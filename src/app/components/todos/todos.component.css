@@ -1,7 +1,9 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 .todo {
 	display: flex;
 	padding: 10px 15px;
-	background-color: #FFF;
+	background-color:#DDD;
 	border-bottom: 1px solid #DDD;
 }
 
@@ -46,7 +48,7 @@
 	outline: none;
 	background: none;
 
-	background-color: #FE4880;
+	background-color: dimgrey;
 	color: #FFF;
 	margin: 15px auto;
 
