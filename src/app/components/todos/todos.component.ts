@@ -17,7 +17,7 @@ export class TodosComponent implements OnInit {
   ngOnInit(): void {
     this.todos = [
       {
-        content: 'Primeiro To do',
+        content: 'Clique em mim. :D',
         completed: false
       }
     ]
@@ -43,7 +43,7 @@ export class TodosComponent implements OnInit {
     }
     editTask(id: number){
       let content = this.todos[id].content;
-      let result = prompt("Edit Task Title", content);
+      let result = prompt("Edite o Conteudo da Task:", content);
       if (result !== null && result !== ""){
         this.todos[id].content = result;
       }
