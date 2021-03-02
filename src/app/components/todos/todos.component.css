@@ -1,11 +1,16 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
 .todo {
 	display: flex;
-	padding: 10px 15px;
+	padding: 10px 50px;
 	background-color:#DDD;
 	border-bottom: 1px solid #DDD;
+	
 }
+
+.todos{
+	background-color: #F3F3F3;
+
+}
+
 
 .todo:nth-child(even) {
 	background-color: #EEE;
@@ -16,20 +21,36 @@
 }
 
 .todo .id {
-	flex: 1 1 50px;
+	flex: 1 1 20px;
+	
 }
 
 .todo .content {
 	flex: 1 1 100%;
+	
 }
 
 .todo.done .content {
 	text-decoration: line-through;
+	
 }
 
-.todo-input {
+.todo-input{
 	display: block;
-	width: 100%;
+	width: 50%;
+	padding: 10px 15px;
+	appearance: none;
+	border: dimgrey;
+	background-color: #F3F3F3;
+	margin-top: 50px;
+	font-size: 20px;
+	outline: none;
+	padding-left: 40px;
+	margin: auto; /*Centralização do texto */
+}
+.todo-input:focus{
+	display: block;
+	width: 50%;
 	padding: 10px 15px;
 	appearance: none;
 	border: none;
@@ -37,6 +58,9 @@
 	margin-top: 15px;
 	font-size: 20px;
 	outline: none;
+	padding-left: 40px;
+	margin: auto;
+	border: 3px solid #555;
 }
 
 .todo-submit {
@@ -47,10 +71,12 @@
 	border: none;
 	outline: none;
 	background: none;
+	
 
 	background-color: dimgrey;
 	color: #FFF;
 	margin: 15px auto;
+	
 
 	padding: 10px 15px;
 	font-size: 18px;
